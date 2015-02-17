@@ -30,4 +30,16 @@ public class MusicManager : MonoBehaviour {
       audioSource.Play();
     }
   }
+
+  public void ChangeVolume(float volume)
+  {
+    if (volume >= 0f && volume <= 1.0f)
+    {
+      audioSource.volume = volume;
+    }
+    else
+    {
+      Debug.LogError("Trying to change volume to an incorrect value");
+    }
+  }
 }
